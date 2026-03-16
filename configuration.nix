@@ -44,6 +44,7 @@
         };
     };
 
+    programs.ssh.startAgent = true;
     programs.bash.enable = false;
 
     users = {
@@ -63,7 +64,10 @@
     ];
 
     nixpkgs.config.allowUnfree = true;
-
-    system.nixos.tags = ["preface"];
+    
+    system.nixos = {
+        label = "BAROS";
+        tags = ["preface"];
+    };
     system.stateVersion = "25.11";
 }
