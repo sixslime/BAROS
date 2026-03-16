@@ -32,7 +32,7 @@
         };
     };
 
-    console.keyMap = "qwerty";
+    console.keyMap = "us";
 
     services = {
         openssh = {
@@ -41,7 +41,6 @@
         };
         xserver.xkb = {
             layout = "us";
-            variant = "qwerty";
         };
     };
 
