@@ -64,5 +64,6 @@
 
     nixpkgs.config.allowUnfree = true;
 
+    system.nixos.label = "preface"
     system.stateVersion = "25.11";
 }
