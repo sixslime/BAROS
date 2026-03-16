@@ -1,0 +1,81 @@
+[main]
+'`' = "0"
+1 = "2"
+2 = "4"
+3 = "6"
+4 = "8"
+5 = "{"
+6 = "\\"
+7 = "}"
+8 = "$"
+9 = "'"
+0 = "&"
+"-" = "?"
+"=" = "%"
+q = [';', 'back']
+w = 'y'
+e = 'f'
+r = 'p'
+t = '('
+y = ')'
+u = 'g'
+i = 'c'
+o = 'r'
+p = 'l'
+'[' = '/'
+']' = '='
+'\' = '@'
+a = ['a', 'up']
+s = ['o', 'left']
+d = ['e', 'right']
+f = ['u', 'down']
+g = ['i', 'inspect']
+h = 'd'
+j = ['h', 'select']
+k = ['t', 'new']
+l = ['n', 'insert']
+';' = ['s', 'delete']
+"'" = '.'
+z = 'z'
+x = 'q'
+c = 'j'
+v = 'k'
+b = 'x'
+n = 'b'
+m = 'm'
+',' = ['w', 'save']
+'.' = 'v'
+'/' = ','
+rightalt = { layer = 'meta' }
+leftmeta = { layer = 'altgr' }
+capslock = 'esc'
+
+[modifier_aliases]
+shift = "shift"
+control = "aux"
+meta = "meta"
+alt = "lead"
+altgr = "special"
+
+[layer.shift--shift]
+'`' = '1'
+1 = '3'
+2 = '5'
+3 = '7'
+4 = '9'
+5 = '['
+6 = '^'
+7 = ']'
+8 = '|'
+9 = '"'
+0 = '*'
+'-' = '!'
+'=' = '`'
+t = '<'
+y = '>'
+'[' = '#'
+']' = '+'
+'\' = '~'
+"'" = '_'
+q = ':'
+'/' = '-'

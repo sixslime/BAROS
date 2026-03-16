@@ -1,0 +1,18 @@
+
+# in 'keyd' form
+[main]
+a = ["b", "action_alias"]
+b = { keyd = "<arbitrary keyd value>"}
+shift = { layer = "shift" }
+
+[modifier_actions]
+# must always have exact keys 'shift', 'meta', 'alt', 'control', and 'altgr'.
+shift = "shift"
+control = "aux"
+meta = "meta"
+alt = "lead"
+altgr = "special"
+
+[layer.shift--shift]
+[layer.control--control]
+[composite."shift+control"]
