@@ -5,7 +5,7 @@
     axiom-keyd-gen = {
       url = "github:sixslime/BAROS.axiom-keyd-gen";
       inputs.nixpkgs.follows = "nixpkgs";
-    }
+    };
   };
   outputs = { self, nixpkgs, ... } @ inputs: {
     nixosConfigurations.BAROS = nixpkgs.lib.nixosSystem {
