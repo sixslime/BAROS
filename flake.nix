@@ -15,7 +15,7 @@
       modules = [
         ./configuration.nix
         ./keyd.nix
-      ]
+      ];
     };
   };
 }
