@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs ... }:
 
 {
     imports = [
@@ -56,11 +56,13 @@
         };
     };
 
-    environment.systemPackages = with pkgs; [
+    environment.systemPackages = (with pkgs; [
         nushell
         neovim
         bash
         git
+    ]) ++ [
+        inputs.axbind
     ];
 
     nixpkgs.config.allowUnfree = true;
