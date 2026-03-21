@@ -62,7 +62,8 @@
         bash
         git
     ]) ++ [
-        inputs.axbind
+        # we gotta make this less stupid and standardize this is input handling or something
+        inputs.axbind.packages.${pkgs.system}.default
     ];
 
     nixpkgs.config.allowUnfree = true;
