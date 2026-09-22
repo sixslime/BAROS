@@ -14,7 +14,7 @@
   boot.extraModulePackages = [ ];
 
   # fix for gayass nvidia nouveau:
-  boot.kernelParams = [ "nouveau.runpm=0" ];
+  boot.blacklistedKernelModules = [ "nouveau" ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
