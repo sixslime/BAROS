@@ -42,7 +42,7 @@ in
     fsType = "ext4";
     neededForBoot = true;
   };
-  environment.persistence.${peristentDir} = {
+  environment.persistence.${persistentDir} = {
     enable = true;
     hideMounts = true;
     directories = [
