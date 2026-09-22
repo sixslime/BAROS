@@ -96,7 +96,6 @@
     },
     "root": {
       "inputs": {
-        "axbind": "axbind",
         "axiom-keyd-gen": "axiom-keyd-gen",
         "impermanence": "impermanence",
         "nixpkgs": "nixpkgs"
