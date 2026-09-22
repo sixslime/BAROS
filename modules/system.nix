@@ -42,9 +42,6 @@
       neovim
       bash
       git
-    ]) ++ (with inputs; [
-        # we gotta make this less stupid and standardize this is input handling or something
-        axbind.packages.${pkgs.stdenv.hostPlatform.system}.default
     ]);
 
     nixpkgs.config.allowUnfree = true;

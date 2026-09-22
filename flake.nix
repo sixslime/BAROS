@@ -8,10 +8,6 @@
       url = "github:sixslime/BAROS.axiom-keyd-gen";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    axbind = {
-      url = "github:sixslime/axbind_3";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     impermanence = {
       url = "github:nix-community/impermanence";
       inputs.nixpkgs.follows = "nixpkgs";

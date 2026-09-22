@@ -1,26 +1,5 @@
 {
   "nodes": {
-    "axbind": {
-      "inputs": {
-        "flake-utils": "flake-utils",
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1788580819,
-        "narHash": "sha256-WBWk+t9FTo7K6C1YsmvtLA/f4Rfb3t638Q1OWjcuGLY=",
-        "owner": "sixslime",
-        "repo": "axbind_3",
-        "rev": "1c2ab7ea5a6cc56d1d4a52ab6bb83d9202148712",
-        "type": "github"
-      },
-      "original": {
-        "owner": "sixslime",
-        "repo": "axbind_3",
-        "type": "github"
-      }
-    },
     "axiom-keyd-gen": {
       "inputs": {
         "flake-utils": "flake-utils_2",
