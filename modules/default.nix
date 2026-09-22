@@ -7,5 +7,6 @@
       ./users.nix
       ./keyd.nix
       ./filesystem.nix
+      ./wm.nix
   ];
 }
