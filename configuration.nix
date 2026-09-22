@@ -53,6 +53,7 @@
             isNormalUser = true;
             description = "six";
             extraGroups = [ "networkmanager" "wheel" ];
+            password = "the";
         };
     };
 

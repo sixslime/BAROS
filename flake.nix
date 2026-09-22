@@ -1,7 +1,9 @@
 {
   description = "BAROS nixos configuration flake";
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    nixpkgs.url = {
+      url = "github:NixOS/nixpkgs/nixos-25.11";
+    };
     axiom-keyd-gen = {
       url = "github:sixslime/BAROS.axiom-keyd-gen";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -10,15 +12,21 @@
       url = "github:sixslime/axbind_3";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    imperm = {
+      url = "github:nix-community/impermanence";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
-  outputs = { self, nixpkgs, ... } @ inputs: {
+  outputs = { self, nixpkgs, imperm, ... } @ inputs: {
     nixosConfigurations.BAROS = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       # TODO: use builtins.fromTOML to parse our cool configs, then pass via specialArgs.
       specialArgs = { inherit inputs; };
       modules = [
+        imperm.nixosModules.impermanence
         ./configuration.nix
         ./keyd.nix
+        ./filesystem.nix
       ];
     };
   };
