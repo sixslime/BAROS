@@ -12,21 +12,19 @@
       url = "github:sixslime/axbind_3";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    imperm = {
+    impermanence = {
       url = "github:nix-community/impermanence";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = { self, nixpkgs, imperm, ... } @ inputs: {
+  outputs = { self, nixpkgs, ... } @ inputs: {
     nixosConfigurations.BAROS = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       # TODO: use builtins.fromTOML to parse our cool configs, then pass via specialArgs.
       specialArgs = { inherit inputs; };
       modules = [
-        imperm.nixosModules.impermanence
-        ./configuration.nix
-        ./keyd.nix
-        ./filesystem.nix
+        ./modules
+        ./hardware-configuration.nix
       ];
     };
   };

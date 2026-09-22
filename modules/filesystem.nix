@@ -4,6 +4,10 @@ let
   persistentDir = "/this";
 in
 {
+  # import impermanence:
+  imports = [
+    inputs.impermanence.nixosModules.impermanence
+  ];
   # base ephemeral fs setup:
   fileSystems = {
     "/" = {

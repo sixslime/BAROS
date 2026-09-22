@@ -1,19 +1,19 @@
 { config, pkgs, inputs, ... }:
 
 {
-    imports = [
-        ./hardware-configuration.nix
-    ];
+    networking.hostName = "BAROS";
+    system = {
+      nixos = {
+        label = "BAROS";
+        tags = ["preface"];
+      };
+      stateVersion = "25.11";
+    };
 
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
 
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-    networking = {
-        hostName = "BAROS";
-        networkmanager.enable = true;
-    };
 
     time.timeZone = "America/Los_Angeles";
 
@@ -33,45 +33,19 @@
     };
 
     console.keyMap = "us";
+    services.xserver.xkb.layout = "us";
 
-    services = {
-        openssh = {
-            enable = true;
-            settings.PermitRootLogin = "yes";
-        };
-        xserver.xkb = {
-            layout = "us";
-        };
-    };
-
-    programs.ssh.startAgent = true;
     programs.bash.enable = false;
 
-    users = {
-        defaultUserShell = pkgs.nushell;
-        users.six = {
-            isNormalUser = true;
-            description = "six";
-            extraGroups = [ "networkmanager" "wheel" ];
-            password = "the";
-        };
-    };
-
     environment.systemPackages = (with pkgs; [
-        nushell
-        neovim
-        bash
-        git
-    ]) ++ [
+      nushell
+      neovim
+      bash
+      git
+    ]) ++ (with inputs; [
         # we gotta make this less stupid and standardize this is input handling or something
-        inputs.axbind.packages.${pkgs.stdenv.hostPlatform.system}.default
-    ];
+        axbind.packages.${pkgs.stdenv.hostPlatform.system}.default
+    ]);
 
     nixpkgs.config.allowUnfree = true;
-    
-    system.nixos = {
-        label = "BAROS";
-        tags = ["preface"];
-    };
-    system.stateVersion = "25.11";
 }
