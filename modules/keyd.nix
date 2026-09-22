@@ -1,7 +1,7 @@
 { config, pkgs, inputs, ... }:
 let
     keydGen = inputs.axiom-keyd-gen.packages.${pkgs.stdenv.hostPlatform.system}.default;
-    generatedFile = pkgs.runCommand "axiom-keyd-gen" {} "${keydGen}/bin/SixSlime.AxiomKeydGen < ${./axioms/keyboard.toml} > $out";
+    generatedFile = pkgs.runCommand "axiom-keyd-gen" {} "${keydGen}/bin/SixSlime.AxiomKeydGen < ${../axioms/keyboard.toml} > $out";
 in
 {
     services.keyd = {
