@@ -5,7 +5,7 @@ let
 in
 {
   # base ephemeral fs setup:
-  filesystems = {
+  fileSystems = {
     "/" = {
       device = "none";
       fsType = "tmpfs";
@@ -37,7 +37,7 @@ in
   ];
 
   # persistence:
-  filesystems.${persistentDir} = {
+  fileSystems.${persistentDir} = {
     device = "/dev/disk/by-label/this";
     fsType = "ext4";
     neededForBoot = true;
