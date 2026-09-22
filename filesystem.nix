@@ -51,6 +51,7 @@ in
       "/var/lib/bluetooth"
       "/var/lib/systemd/coredump"
       "/etc/NetworkManager/system-connections"
+      "/etc/ssh"
       { directory = "/trash"; mode = "0777"; }
     ];
     files = [
