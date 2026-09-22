@@ -22,8 +22,8 @@
     nvidia = {
       modesetting.enable = true;
       open = false;
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
     };
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
   services.xserver.videoDrivers = [ "nvidia" ];
   # boot.kernelParams = [ "nouveau.runpm=0" ];
