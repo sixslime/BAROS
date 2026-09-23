@@ -33,6 +33,7 @@
       ];
     };
     serviceConfig = {
+      ExecStart="${pkgs.lemurs}/bin/lemurs"
       Type = "idle";
       StandardInput = "tty";
       TTYPath = "/dev/tty1";
@@ -45,7 +46,7 @@
     restartIfChanged = false;
   };
 
-  environment.etc."lemurs/wayland/miracle-wm" = {
+  environment.etc."lemurs/wayland/miracle" = {
     text = ''
       #!/bin/sh
       exec dbus-run-session miracle-wm
