@@ -14,16 +14,27 @@
   boot.extraModulePackages = [ ];
 
   # nvidia bullshit:
+  # Dell XPS 15 9550 btw fuck you.
   hardware = {
+    graphics = {
+      enable = true;
+    };
     nvidia = {
       modesetting.enable = true;
       open = false;
       package = config.boot.kernelPackages.nvidiaPackages.stable;
       nvidiaSettings = true;
     };
+    prime = {
+      offload = {
+        enable = true;
+        enableOffloadCmd = true;
+      };
+      intelBusId = "PCI:0:2:0";
+      nvidiaBusId = "PCI:1:0:0";
+    };
   };
-  # services.xserver.videoDrivers = [ "nvidia" ];
-  boot.kernelParams = [ "nouveau.runpm=0" ];
+  services.xserver.videoDrivers = [ "nvidia" ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
