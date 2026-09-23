@@ -24,8 +24,8 @@
   };
 
   systemd.services.display-manager = {
-    description = "Lemurs";
     unitConfig = {
+      Description = "Lemurs";
       Wants = [ "systemd-user-sessions.service" ];
       After = [
         "systemd-user-sessions.service"
