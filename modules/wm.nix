@@ -51,7 +51,7 @@
   environment.etc."lemurs/wayland/miracle" = {
     text = ''
       #!/bin/sh
-      exec ${lib.getExe' services.dbus.dubsPackage "dbus-run-session"} ${lib.getExe' pkgs.miracle-wm "miracle-wm"}
+      exec ${lib.getExe' config.services.dbus.dbusPackage "dbus-run-session"} ${lib.getExe' pkgs.miracle-wm "miracle-wm"}
     '';
     mode = "0755";
   };
