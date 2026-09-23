@@ -13,19 +13,15 @@
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
-  # nvidia bullshit:
-  # hardware = {
-  #   graphics = {
-  #     enable = true;
-  #     enable32Bit = true;
-  #   };
-  #   nvidia = {
-  #     modesetting.enable = true;
-  #     open = false;
-  #     package = config.boot.kernelPackages.nvidiaPackages.stable;
-  #     nvidiaSettings = true;
-  #   };
-  # };
+  nvidia bullshit:
+  hardware = {
+    nvidia = {
+      modesetting.enable = true;
+      open = false;
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
+      nvidiaSettings = true;
+    };
+  };
   # services.xserver.videoDrivers = [ "nvidia" ];
   # boot.kernelParams = [ "nouveau.runpm=0" ];
 
