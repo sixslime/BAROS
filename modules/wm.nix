@@ -2,7 +2,7 @@
 # lets just fist ourselves.
 # this is me re-implementing 'services.displayManagers.lemurs' and 'programs.wayland.miracle-wm' if they sucked.
 {
-  environment.systemPackages = with (pkgs; [
+  environment.systemPackages = (with pkgs; [
     lemurs
     miracle-wm
   ]);
