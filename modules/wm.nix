@@ -33,7 +33,7 @@
       ];
     };
     serviceConfig = {
-      ExecStart="${pkgs.lemurs}/bin/lemurs"
+      ExecStart="${pkgs.lemurs}/bin/lemurs";
       Type = "idle";
       StandardInput = "tty";
       TTYPath = "/dev/tty1";
