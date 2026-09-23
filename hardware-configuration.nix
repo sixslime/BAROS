@@ -13,7 +13,7 @@
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
-  nvidia bullshit:
+  # nvidia bullshit:
   hardware = {
     nvidia = {
       modesetting.enable = true;
