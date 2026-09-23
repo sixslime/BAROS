@@ -51,14 +51,12 @@
     restartIfChanged = false;
     aliases = [ "display-manager.service" ];
   };
-  
+
   environment.etc = {
     "lemurs/wayland/miracle" = {
       text = ''
         #!/bin/sh
-        exec ${lib.getExe' pkgs.dbus "dbus-run-session"} \
-          --dbus-daemon=${lib.getExe' pkgs.dbus "dbus-daemon"} \
-          -- ${lib.getExe' pkgs.miracle-wm "miracle-wm"}
+        exec ${pkgs.miracle-wm}/libexec/miracle-wm-session-setup
       '';
       mode = "0755";
     };
