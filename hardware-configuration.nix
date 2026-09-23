@@ -20,9 +20,9 @@
       enable = true;
     };
     nvidia = {
+      branch = "legacy_580";
       modesetting.enable = true;
       open = false;
-      package = config.boot.kernelPackages.nvidiaPackages.stable;
       nvidiaSettings = true;
       prime = {
         offload = {

@@ -2,7 +2,7 @@
   description = "BAROS nixos configuration flake";
   inputs = {
     nixpkgs = {
-      url = "github:NixOS/nixpkgs/nixos-25.11";
+      url = "github:NixOS/nixpkgs/nixos-unstable";
     };
     axiom-keyd-gen = {
       url = "github:sixslime/BAROS.axiom-keyd-gen";
