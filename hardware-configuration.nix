@@ -13,7 +13,7 @@
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
-  # nvidia proprietary bullshit:
+  # nvidia bullshit:
   hardware = {
     graphics = {
       enable = true;
@@ -21,8 +21,9 @@
     };
     nvidia = {
       modesetting.enable = true;
-      open = false;
+      open = true;
       package = config.boot.kernelPackages.nvidiaPackages.stable;
+      nvidiaSettings = true;
     };
   };
   services.xserver.videoDrivers = [ "nvidia" ];

@@ -10,6 +10,13 @@
       stateVersion = "25.11";
     };
 
+    environment.systemPackages = (with pkgs; [
+      nushell
+      neovim
+      bash
+      git
+    ]);
+
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
 
@@ -36,13 +43,6 @@
     services.xserver.xkb.layout = "us";
 
     programs.bash.enable = false;
-
-    environment.systemPackages = (with pkgs; [
-      nushell
-      neovim
-      bash
-      git
-    ]);
 
     nixpkgs.config.allowUnfree = true;
 }
