@@ -55,7 +55,7 @@
 
   # -- MIRACLE WM --
   security.polkit.enable = true;
-  security.services.swaylock = { };
+  security.pam.services.swaylock = { };
   programs.dconf.enable = true;
   programs.xwayland.enable = true;
   services.graphical-desktop.enable = true;
