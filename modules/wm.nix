@@ -26,27 +26,32 @@
   systemd.services.lemurs = {
     unitConfig = {
       Description = "Lemurs";
-      Wants = [ "systemd-user-sessions.service" ];
+      Wants = [
+        "systemd-user-sessions.service"
+      ];
       After = [
+        "systemd-logind.service"
         "systemd-user-sessions.service"
         "plymouth-quit-wait.service"
         "getty@tty2.service"
       ];
+      Conflicts = [
+        "getty@tty2.service"
+      ];
     };
     serviceConfig = {
-      ExecStart="${lib.getExe' pkgs.lemurs "lemurs"}";
+      ExecStart = "${lib.getExe' pkgs.lemurs "lemurs"}";
       Type = "idle";
       StandardInput = "tty";
       TTYPath = "/dev/tty2";
       TTYReset = "yes";
       TTYVHangup = "yes";
-      # clear the console before starting:
       TTYVTDisallocate = true;
     };
-    # don't kill a user session when using nixos-rebuild:
     restartIfChanged = false;
     aliases = [ "display-manager.service" ];
   };
+  
   environment.etc = {
     "lemurs/wayland/miracle" = {
       text = ''
