@@ -21,7 +21,7 @@
     };
     nvidia = {
       modesetting.enable = true;
-      open = true;
+      open = false;
       package = config.boot.kernelPackages.nvidiaPackages.stable;
       nvidiaSettings = true;
     };
