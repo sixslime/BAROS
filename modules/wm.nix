@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, lib, ... }:
 # lets just fist ourselves.
 # this is me re-implementing 'services.displayManagers.lemurs' and 'programs.wayland.miracle-wm' if they sucked.
 {
@@ -34,7 +34,7 @@
       ];
     };
     serviceConfig = {
-      ExecStart="${pkgs.lemurs}/bin/lemurs";
+      ExecStart="${lib.getExe' pkgs.lemurs "lemurs"}";
       Type = "idle";
       StandardInput = "tty";
       TTYPath = "/dev/tty2";
@@ -51,7 +51,7 @@
   environment.etc."lemurs/wayland/miracle" = {
     text = ''
       #!/bin/sh
-      exec dbus-run-session miracle-wm
+      exec ${lib.getExe' services.dbus.dubsPackage "dbus-run-session"} ${lib.getExe' pkgs.miracle-wm "miracle-wm"}
     '';
     mode = "0755";
   };
