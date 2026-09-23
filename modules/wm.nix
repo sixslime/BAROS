@@ -47,13 +47,26 @@
     restartIfChanged = false;
     aliases = [ "display-manager.service" ];
   };
-
+  environment.etc = {
+    "lemurs/wayland/miracle" = {
+      text = ''
+        #!/bin/sh
+        exec ${lib.getExe' pkgs.dbus "dbus-run-session"} \
+          --dbus-daemon=${lib.getExe' pkgs.dbus "dbus-daemon"} \
+          -- ${lib.getExe' pkgs.miracle-wm "miracle-wm"}
+      '';
+      mode = "0755";
+    };
+    "lemurs/config.toml" = {
+      text= ''
+        tty = 2
+        system_shell = "${lib.getExe' pkgs.bash "bash"}"
+        initial_path = "/run/current-system/sw/bin"
+      '';
+    };
+  };
   environment.etc."lemurs/wayland/miracle" = {
-    text = ''
-      #!/bin/sh
-      exec ${lib.getExe' pkgs.dbus "dbus-run-session"} ${lib.getExe' pkgs.miracle-wm "miracle-wm"}
-    '';
-    mode = "0755";
+    
   };
 
   # -- MIRACLE WM --
