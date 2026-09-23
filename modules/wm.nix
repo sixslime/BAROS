@@ -65,9 +65,6 @@
       '';
     };
   };
-  environment.etc."lemurs/wayland/miracle" = {
-    
-  };
 
   # -- MIRACLE WM --
   security.polkit.enable = true;
