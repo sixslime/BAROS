@@ -35,9 +35,9 @@
         "plymouth-quit-wait.service"
         "getty@tty2.service"
       ];
-      Conflicts = [
-        "getty@tty2.service"
-      ];
+      # Conflicts = [
+      #   "getty@tty2.service"
+      # ];
     };
     serviceConfig = {
       ExecStart = "${lib.getExe' pkgs.lemurs "lemurs"}";
