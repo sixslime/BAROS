@@ -56,7 +56,7 @@
     "lemurs/wayland/miracle" = {
       text = ''
         #!/bin/sh
-        exec ${pkgs.miracle-wm}/libexec/miracle-wm-session-setup
+        exec ${lib.getExe' pkgs.miracle-wm "miracle-wm-session"};
       '';
       mode = "0755";
     };
@@ -65,6 +65,11 @@
         tty = 2
         system_shell = "${lib.getExe' pkgs.bash "bash"}"
         initial_path = "/run/current-system/sw/bin"
+        include_tty_shell = false
+        shell_login_flag = "short"
+
+        [wayland]
+        scripts_path = "/etc/lemurs/wayland"
       '';
     };
   };
