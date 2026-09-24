@@ -56,7 +56,14 @@
     "lemurs/wayland/miracle" = {
       text = ''
         #!/bin/sh
-        exec ${lib.getExe' pkgs.miracle-wm "miracle-wm-session"};
+        exec ${lib.getExe' pkgs.miracle-wm "miracle-wm-session"}
+      '';
+      mode = "0755";
+    };
+    "lemurs/wayland/test" = {
+      text = ''
+        #!/bin/sh
+        exec systemd-cat --identifier=miracle-wm ${pkgs.miracle-wm}/bin/miracle-wm --systemd-session-configure=${pkgs.miracle-wm}/libexec/miracle-wm-session-setup --driver-quirks devnode:/dev/dri/card1
       '';
       mode = "0755";
     };
@@ -85,6 +92,4 @@
     extraPortals = [ ];
   };
   services.xserver.desktopManager.runXdgAutostartIfNone = true;
-
-  services.xserver.enable = true;
 }
