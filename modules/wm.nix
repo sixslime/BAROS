@@ -85,4 +85,6 @@
     extraPortals = [ ];
   };
   services.xserver.desktopManager.runXdgAutostartIfNone = true;
+
+  services.xserver.enable = true;
 }
