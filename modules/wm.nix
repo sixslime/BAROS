@@ -3,6 +3,12 @@
 # this is me re-implementing 'services.displayManagers.lemurs' and 'programs.wayland.miracle-wm' if they sucked.
 let
   lemursTty = 2;
+  # AS CLAUDE PUT IT:
+  # lemurs 0.4.0 unsets XDG_SEAT/XDG_VTNR right before it opens the PAM session and never sets
+  # PAM_TTY, so pam_systemd registers the login with NO seat. Mir only talks to logind and asks it
+  # for "the active session on seat0", so it finds nothing and falls back to a fake display.
+  # pam_env (pam_env.conf syntax, the same format NixOS uses for /etc/pam/environment) puts the
+  # variables back into the PAM environment, which pam_systemd reads first.
   lemursSeatEnv = pkgs.writeText "lemurs-pam-seat.conf" ''
     XDG_SEAT OVERRIDE="seat0"
     XDG_VTNR OVERRIDE="${toString lemursTty}"
