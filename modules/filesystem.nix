@@ -70,7 +70,9 @@ in
         "work"
         "downloads"
         "data"
+        "path"
         ".config"
+        ".local"
         { directory = ".ssh"; mode = "0700"; }
       ];
     };
