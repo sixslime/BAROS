@@ -79,6 +79,9 @@ in
         ".local"
         { directory = ".ssh"; mode = "0700"; }
       ];
+      files = [
+        "refs/background"
+      ];
     };
   };
 

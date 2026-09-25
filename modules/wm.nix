@@ -18,6 +18,8 @@ in
   environment.systemPackages = (with pkgs; [
     lemurs
     miracle-wm
+    swaybg
+    alacritty
   ]);
 
   # -- LEMURS --
