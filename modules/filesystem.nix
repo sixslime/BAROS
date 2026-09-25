@@ -85,6 +85,7 @@ in
     ];
     text = ''
       ln -sfn /home/six/.config /home/six/config
+      ln -sfn /home/six/.config /root/.config
     '';
   };
 }

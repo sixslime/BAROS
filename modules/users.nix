@@ -15,4 +15,9 @@
             password = "the";
         };
     };
+    
+    security.sudo = {
+        enable = true;
+        wheelNeedsPassword = false;
+    };
 }
