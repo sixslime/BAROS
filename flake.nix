@@ -14,11 +14,21 @@
       inputs.home-manager.follows = "";
     };
   };
-  outputs = { self, nixpkgs, ... } @ inputs: {
-    nixosConfigurations.BAROS = nixpkgs.lib.nixosSystem {
+  outputs = { self, nixpkgs, ... } @ inputs: 
+  let 
+    identity = {
+      hostName = "BAROS";
+      primaryUser = "six";
+    };
+  in 
+  {
+    nixosConfigurations.${identity.hostName} = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       # TODO: use builtins.fromTOML to parse our cool configs, then pass via specialArgs.
-      specialArgs = { inherit inputs; };
+      specialArgs = {
+        inherit inputs;
+        inherit identity;
+      };
       modules = [
         ./modules
         ./hardware-configuration.nix

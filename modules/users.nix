@@ -1,12 +1,12 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, identity, ... }:
 
 {
     users = {
         defaultUserShell = pkgs.nushell;
         users = {
-            six = {
+            ${identity.primaryUser} = {
                 isNormalUser = true;
-                description = "six";
+                description = "${identity.primaryUser}";
                 extraGroups = [ "networkmanager" "wheel" "seat" ];
                 password = "the";
             };
@@ -15,7 +15,7 @@
             password = "the";
         };
     };
-    
+
     security.sudo = {
         enable = true;
         wheelNeedsPassword = false;

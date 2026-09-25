@@ -1,10 +1,10 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, identity, ... }:
 
 {
-    networking.hostName = "BAROS";
+    networking.hostName = identity.hostName;
     system = {
       nixos = {
-        label = "BAROS";
+        label = identity.hostName;
         tags = ["preface"];
       };
       stateVersion = "25.11";

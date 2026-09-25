@@ -1,7 +1,11 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, identity, ... }:
 
 let
   persistentDir = "/this";
+  homeDirs = {
+    primary = config.users.users.${identity.primaryUser}.home;
+    root = config.users.users.root.home;
+  };
 in
 {
   # import impermanence:
@@ -65,7 +69,7 @@ in
       "/etc/ssh/ssh_host_rsa_key"
       "/etc/ssh/ssh_host_rsa_key.pub"
     ];
-    users.six = {
+    users.${identity.primaryUser} = {
       directories = [
         "work"
         "downloads"
@@ -84,8 +88,8 @@ in
       "specialfs"
     ];
     text = ''
-      ln -sfn /home/six/.config /home/six/config
-      ln -sfn /home/six/.config /root/.config
+      ln -sfn ${homeDirs.primary}/.config ${homeDirs.primary}/config
+      ln -sfn ${homeDirs.primary}/.config ${homeDirs.root}/.config
       ln -sfn /usr/bin/env /env
     '';
   };
