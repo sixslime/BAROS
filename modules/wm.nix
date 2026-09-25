@@ -1,6 +1,13 @@
 { config, pkgs, inputs, lib, ... }:
 # lets just fist ourselves.
 # this is me re-implementing 'services.displayManagers.lemurs' and 'programs.wayland.miracle-wm' if they sucked.
+let
+  lemursTty = 2;
+  lemursSeatEnv = pkgs.writeText "lemurs-pam-seat.conf" ''
+    XDG_SEAT OVERRIDE="seat0"
+    XDG_VTNR OVERRIDE="${toString lemursTty}"
+  '';
+in
 {
   environment.systemPackages = (with pkgs; [
     lemurs
@@ -13,6 +20,13 @@
     startSession = true;
     setLoginUid = false;
     #enableGnomeKeyring = config.services.gnome.gnome-keyring.enable;
+    rules.session.lemurs-seat = {
+      # must run before pam_systemd
+      order = config.security.pam.services.lemurs.rules.session.systemd.order - 10;
+      control = "required";
+      modulePath = "${config.security.pam.package}/lib/security/pam_env.so";
+      args = [ "conffile=${lemursSeatEnv}" "readenv=0" ];
+    };
   };
 
   services = {
@@ -60,20 +74,15 @@
       '';
       mode = "0755";
     };
-    "lemurs/wayland/test" = {
-      text = ''
-        #!/bin/sh
-        exec systemd-cat --identifier=miracle-wm ${pkgs.miracle-wm}/bin/miracle-wm --systemd-session-configure=${pkgs.miracle-wm}/libexec/miracle-wm-session-setup --driver-quirks devnode:/dev/dri/card1
-      '';
-      mode = "0755";
-    };
     "lemurs/config.toml" = {
-      text= ''
-        tty = 2
+      text = ''
+        tty = ${toString lemursTty}
         system_shell = "${lib.getExe' pkgs.bash "bash"}"
         initial_path = "/run/current-system/sw/bin"
-        include_tty_shell = false
         shell_login_flag = "short"
+
+        [environment_switcher]
+        include_tty_shell = false
 
         [wayland]
         scripts_path = "/etc/lemurs/wayland"
