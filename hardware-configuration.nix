@@ -24,6 +24,7 @@
       modesetting.enable = true;
       open = false;
       nvidiaSettings = true;
+      powerManagement = true;
       prime = {
         offload = {
           enable = true;
