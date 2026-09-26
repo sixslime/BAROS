@@ -23,6 +23,6 @@
     autoLogin = {
       enable = true;
       user = identity.primaryUser;
-    }
-  }
+    };
+  };
 }
