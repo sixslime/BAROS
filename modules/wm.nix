@@ -18,11 +18,14 @@
     ];
   };
 
-  services.displayManager = {
+  services.greetd = {
     enable = true;
-    autoLogin = {
-      enable = true;
-      user = identity.primaryUser;
+    settings = rec {
+      initial_session = {
+        command = lib.getExe' pkgs.sway "sway";
+        user = identity.primaryUser;
+      };
+      default_session = initial_session;
     };
   };
 }
