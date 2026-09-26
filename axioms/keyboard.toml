@@ -46,8 +46,7 @@ m = 'm'
 ',' = ['w', 'save']
 '.' = 'v'
 '/' = ','
-rightalt = { layer = 'meta' }
-leftmeta = { layer = 'altgr' }
+rightalt = { layer = 'altgr' }
 capslock = 'esc'
 
 [modifier_aliases]
