@@ -20,6 +20,7 @@
 
   services.greetd = {
     enable = true;
+    restart = true;
     settings = rec {
       initial_session = {
         command = lib.getExe' pkgs.sway "sway";
