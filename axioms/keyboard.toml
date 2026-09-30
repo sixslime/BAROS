@@ -1,43 +1,45 @@
+
 [main]
-'`' = "0"
-1 = "2"
-2 = "4"
-3 = "6"
-4 = "8"
-5 = "{"
-6 = "\\"
-7 = "}"
-8 = "$"
-9 = "'"
+'`' = {keyd = "noop"}
+1 = "@"
+2 = ":"
+3 = "="
+4 = "~" 
+5 = {keyd = "noop"}
+6 = {keyd = "noop"} 
+7 = {keyd = "noop"}
+8 = "*"
+9 = '?'
 0 = "&"
-"-" = "?"
-"=" = "%"
+"-" = "`" 
+"=" = {keyd = "noop"}
 q = [';', 'back']
 w = 'y'
-e = 'f'
+e = ['f', 'find'] 
 r = 'p'
-t = '('
-y = ')'
+t = {layer = 'programming'}
+y = '"'
 u = 'g'
-i = 'c'
+i = ['c', 'copy']
 o = 'r'
-p = 'l'
-'[' = '/'
-']' = '='
-'\' = '@'
+p = ['l', 'close']
+'[' = '_'
+']' = '/'
+'\' = '|' 
+'/' = {layer = 'numbers'}
 a = ['a', 'up']
 s = ['o', 'left']
 d = ['e', 'right']
 f = ['u', 'down']
-g = ['i', 'inspect']
-h = 'd'
+g = ['i', 'into']
+h = ['d', 'inspect']
 j = ['h', 'select']
 k = ['t', 'new']
 l = ['n', 'insert']
 ';' = ['s', 'delete']
 "'" = '.'
 z = 'z'
-x = 'q'
+x = 'q' 
 c = 'j'
 v = 'k'
 b = 'x'
@@ -45,36 +47,61 @@ n = 'b'
 m = 'm'
 ',' = ['w', 'save']
 '.' = 'v'
-'/' = ','
-rightalt = { layer = 'altgr' }
+
+leftalt = {layer = 'meta' }
+leftmeta = { layer = 'altgr' }
+rightalt = { layer = 'alt' }
 capslock = 'esc'
 
 [modifier_aliases]
-shift = "shift"
+shift = "invert"
 control = "aux"
-meta = "meta"
-alt = "lead"
+meta = "window"
+alt = "action"
 altgr = "special"
 
+[layer.numbers]
+g = "0"
+t = "9"
+f = "1"
+r = "2"
+d = "3"
+e = "4"
+s = "5"
+w = "6"
+a = "7"
+q = "8"
+
+[layer.programming]
+j = '('
+k = ')'
+l = '{'
+';' = '}'
+u = '['
+i = ']'
+o = '<'
+p = '>'
+e = '$'
+
+
 [layer.shift--shift]
-'`' = '1'
-1 = '3'
-2 = '5'
-3 = '7'
-4 = '9'
-5 = '['
-6 = '^'
-7 = ']'
-8 = '|'
-9 = '"'
-0 = '*'
-'-' = '!'
-'=' = '`'
-t = '<'
-y = '>'
-'[' = '#'
-']' = '+'
-'\' = '~'
-"'" = '_'
-q = ':'
-'/' = '-'
+'`' = {keyd = "noop"}
+1 = {keyd = "noop"}
+2 = {keyd = "noop"}
+3 = {keyd = "noop"}
+4 = '^'
+5 = {keyd = "noop"}
+6 = {keyd = "noop"}
+7 = {keyd = "noop"}
+8 = '%'
+9 = "!"
+0 = '+'
+'-' = {keyd = "noop"}
+'=' = {keyd = "noop"}
+t = {keyd = "noop"}
+y = "'"
+'[' = '-'
+']' = '#'
+'\' = '\'
+"'" = ','
+q = {keyd = "noop"}

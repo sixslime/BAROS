@@ -5,7 +5,7 @@ a = ["b", "action_alias"]
 b = { keyd = "<arbitrary keyd value>"}
 shift = { layer = "shift" }
 
-[modifier_actions]
+[modifier_aliases]
 # must always have exact keys 'shift', 'meta', 'alt', 'control', and 'altgr'.
 shift = "shift"
 control = "aux"
