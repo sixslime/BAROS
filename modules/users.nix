@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, identity, ... }:
+{ config, pkgs, inputs, identity, lib, ... }:
 
 {
     users.users = {
