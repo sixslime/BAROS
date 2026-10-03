@@ -1,7 +1,4 @@
 { config, pkgs, inputs, lib, identity, ... }:
-# lets just fist ourselves.
-# aint never use no lemurs and miracle-wm. actually, aint never use no miracle-wm.
-# just fucking using sway with no login bro idc.
 {
   programs.sway = {
     enable = true;
@@ -23,7 +20,7 @@
     restart = true;
     settings = rec {
       initial_session = {
-        command = lib.getExe' pkgs.sway "sway";
+        command = lib.getExe config.programs.sway.package;
         user = identity.primaryUser;
       };
       default_session = initial_session;
