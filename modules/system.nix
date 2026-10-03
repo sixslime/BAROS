@@ -13,7 +13,6 @@
     environment.systemPackages = (with pkgs; [
       nushell
       neovim
-      bash
       git
       zoxide
     ]);
@@ -42,8 +41,6 @@
 
     console.keyMap = "us";
     services.xserver.xkb.layout = "us";
-
-    programs.bash.enable = false;
 
     nixpkgs.config.allowUnfree = true;
 }
