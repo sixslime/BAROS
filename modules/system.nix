@@ -16,6 +16,7 @@
       git
       zoxide
       luakit
+      tree
     ]);
 
     boot.loader.systemd-boot.enable = true;

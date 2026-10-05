@@ -1,23 +1,23 @@
 
 [main]
-'`' = {keyd = "noop"}
-1 = "@"
+'1' = {keyd = "noop"}
+'`' = "@"
 2 = ":"
 3 = "="
-4 = "~" 
+4 = "$" 
 5 = {keyd = "noop"}
 6 = {keyd = "noop"} 
 7 = {keyd = "noop"}
 8 = "*"
 9 = '?'
 0 = "&"
-"-" = "`" 
+"-" = {keyd = "noop"} 
 "=" = {keyd = "noop"}
-q = [';', 'back']
+q = ['z', 'back']
 w = 'y'
 e = ['f', 'find'] 
 r = 'p'
-t = {layer = 'programming'}
+t = ";"
 y = '"'
 u = 'g'
 i = ['c', 'copy']
@@ -25,7 +25,7 @@ o = 'r'
 p = ['l', 'close']
 '[' = '-'
 ']' = '/'
-'\' = '|' 
+'\' = '~' 
 '/' = {layer = 'numbers'}
 a = ['a', 'up']
 s = ['o', 'left']
@@ -38,7 +38,7 @@ k = ['t', 'new']
 l = ['n', 'insert']
 ';' = ['s', 'delete']
 "'" = '.'
-z = 'z'
+z = { layer = 'programming' }
 x = 'q' 
 c = 'j'
 v = 'k'
@@ -47,7 +47,6 @@ n = 'b'
 m = 'm'
 ',' = ['w', 'save']
 '.' = 'v'
-rightshift = '$'
 
 leftalt = {layer = 'meta' }
 leftmeta = { layer = 'altgr' }
@@ -62,35 +61,36 @@ alt = "action"
 altgr = "special"
 
 [layer.numbers]
-g = '0'
-f = '1'
-d = '2'
-s = '3'
-a = '4'
-r = '5'
-e = '6'
-w = '7'
-q = '8'
-t = '9'
+a = '0'
+w = '1'
+e = '2'
+r = '3'
+s = '4'
+d = '5'
+f = '6'
+x = '7'
+c = '8'
+v = '9'
 
 [layer.programming]
 j = '('
 k = ')'
-l = '{'
-';' = '}'
-u = '['
-i = ']'
+u = '{'
+i = '}'
+n = '['
+m = ']'
 o = '<'
-p = '>'
-
+l = '>'
+y = '`'
+t = "\"
 
 [layer.shift--shift]
-4 = '^'
+t = "|"
 8 = '%'
 9 = "!"
 0 = '+'
 y = "'"
 '[' = '_'
 ']' = '#'
-'\' = '\'
+'\' = '^'
 "'" = ','
