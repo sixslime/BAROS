@@ -2,8 +2,8 @@
 [main]
 '`' = {keyd = "noop"}
 1 = "@"
-2 = "="
-3 = ":"
+2 = ":"
+3 = "="
 4 = "~" 
 5 = {keyd = "noop"}
 6 = {keyd = "noop"} 
@@ -23,7 +23,7 @@ u = 'g'
 i = ['c', 'copy']
 o = 'r'
 p = ['l', 'close']
-'[' = '_'
+'[' = '-'
 ']' = '/'
 '\' = '|' 
 '/' = {layer = 'numbers'}
@@ -47,6 +47,7 @@ n = 'b'
 m = 'm'
 ',' = ['w', 'save']
 '.' = 'v'
+rightshift = '$'
 
 leftalt = {layer = 'meta' }
 leftmeta = { layer = 'altgr' }
@@ -81,7 +82,6 @@ u = '['
 i = ']'
 o = '<'
 p = '>'
-e = '$'
 
 
 [layer.shift--shift]
@@ -90,7 +90,7 @@ e = '$'
 9 = "!"
 0 = '+'
 y = "'"
-'[' = '-'
+'[' = '_'
 ']' = '#'
 '\' = '\'
 "'" = ','

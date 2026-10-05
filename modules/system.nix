@@ -15,6 +15,7 @@
       neovim
       git
       zoxide
+      luakit
     ]);
 
     boot.loader.systemd-boot.enable = true;
