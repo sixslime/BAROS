@@ -61,7 +61,7 @@ alt = "action"
 altgr = "special"
 
 [layer.numbers]
-capslock = '0'
+a = '0'
 w = '1'
 e = '2'
 r = '3'
@@ -71,6 +71,15 @@ f = '6'
 x = '7'
 c = '8'
 v = '9'
+# redundancies:
+t = '-'
+g = '+'
+capslock = '.'
+q = '_'
+1 = '*'
+2 = '/'
+3 = '%'
+4 = '$'
 
 [layer.programming]
 j = '('
@@ -85,9 +94,9 @@ y = '`'
 '[' = '\'
 ';' = '-'
 "'" = '_'
-g = '$'
-f = '+'
-d = '%'
+s = '%'
+d = '+'
+f = '$'
 
 [layer.shift--shift]
 t = "|"
