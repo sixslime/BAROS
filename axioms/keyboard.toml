@@ -8,7 +8,7 @@
 5 = {keyd = "noop"}
 6 = {keyd = "noop"} 
 7 = {keyd = "noop"}
-8 = {keyd = "noop"}
+8 = '$'
 9 = '?'
 0 = "&"
 "-" = {keyd = "noop"} 
@@ -94,9 +94,8 @@ y = '`'
 '[' = '\'
 s = '%'
 d = '+'
-f = '$'
 t = '|'
-g = '_'
+f = '_'
 
 [layer.shift--shift]
 t = "_"
