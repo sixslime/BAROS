@@ -72,15 +72,14 @@ x = '7'
 c = '8'
 v = '9'
 # redundancies:
-t = '-'
-g = '+'
+t = '+'
+g = '-'
 capslock = '.'
 q = '_'
 1 = '*'
 2 = '/'
 3 = '%'
 4 = '$'
-space = '-'
 
 [layer.programming]
 j = '('
@@ -97,7 +96,7 @@ s = '%'
 d = '+'
 f = '$'
 t = '|'
-space = '_'
+g = '_'
 
 [layer.shift--shift]
 t = "|"
