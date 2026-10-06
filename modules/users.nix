@@ -10,7 +10,7 @@
         };
         root = {
             password = "the";
-            home = config.users.users.${identity.primaryUser}.home;
+            home = lib.mkForce config.users.users.${identity.primaryUser}.home;
             createHome = false;
         };
     };
