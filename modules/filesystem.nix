@@ -92,10 +92,11 @@ in
     ];
     text = ''
       ln -sfn ${homeDirs.primary}/.config ${homeDirs.primary}/config
-      ln -sfn ${homeDirs.primary}/.config ${homeDirs.root}/.config
+      ln -sfn ${homeDirs.primary} ${homeDirs.root}
       ln -sfn ${homeDirs.primary}/config/git/config /etc/gitconfig
       ln -sfn /usr/bin/env /env
       mkdir -p ${homeDirs.primary}/test
+      chown ${identity.primaryUser} ${homeDirs.primary}/test
     '';
   };
 }

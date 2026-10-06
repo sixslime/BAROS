@@ -10,6 +10,8 @@
         };
         root = {
             password = "the";
+            home = config.users.users.${identity.primaryUser}.home;
+            createHome = false;
         };
     };
 

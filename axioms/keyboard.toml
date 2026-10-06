@@ -97,6 +97,7 @@ y = '`'
 s = '%'
 d = '+'
 f = '$'
+t = '|'
 
 [layer.shift--shift]
 t = "|"
