@@ -17,6 +17,8 @@
       zoxide
       luakit
       tree
+      hyfetch
+      fastfetch
     ]);
 
     boot.loader.systemd-boot.enable = true;

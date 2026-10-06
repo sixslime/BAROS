@@ -1,31 +1,31 @@
 
 [main]
-'1' = {keyd = "noop"}
 '`' = {keyd = "noop"}
+1 = "@"
 2 = ":"
 3 = "="
-4 = {keyd = "noop"} 
+4 = "~" 
 5 = {keyd = "noop"}
 6 = {keyd = "noop"} 
 7 = {keyd = "noop"}
-8 = '$'
+8 = "*"
 9 = '?'
 0 = "&"
-"-" = {keyd = "noop"} 
+"-" = "`" 
 "=" = {keyd = "noop"}
-q = ['z', 'back']
+q = [';', 'back']
 w = 'y'
 e = ['f', 'find'] 
 r = 'p'
-t = ";"
-y = "'"
+t = {layer = 'programming'}
+y = '"'
 u = 'g'
 i = ['c', 'copy']
-o = ['r', 'reset']
+o = 'r'
 p = ['l', 'close']
-'[' = '/'
-']' = '~'
-'\' = '@' 
+'[' = '-'
+']' = '/'
+'\' = '|' 
 '/' = {layer = 'numbers'}
 a = ['a', 'up']
 s = ['o', 'left']
@@ -38,7 +38,7 @@ k = ['t', 'new']
 l = ['n', 'insert']
 ';' = ['s', 'delete']
 "'" = '.'
-z = { layer = 'programming' }
+z = 'z'
 x = 'q' 
 c = 'j'
 v = 'k'
@@ -47,6 +47,7 @@ n = 'b'
 m = 'm'
 ',' = ['w', 'save']
 '.' = 'v'
+rightshift = '$'
 
 leftalt = {layer = 'meta' }
 leftmeta = { layer = 'altgr' }
@@ -61,46 +62,35 @@ alt = "action"
 altgr = "special"
 
 [layer.numbers]
-a = '0'
-w = '1'
-e = '2'
-r = '3'
-s = '4'
-d = '5'
-f = '6'
-x = '7'
-c = '8'
-v = '9'
-# redundancies:
-l = '+'
-k = '-'
-j = '.'
-m = '_'
-i = '%'
-o = '$'
+g = '0'
+f = '1'
+d = '2'
+s = '3'
+a = '4'
+r = '5'
+e = '6'
+w = '7'
+q = '8'
+t = '9'
 
 [layer.programming]
 j = '('
 k = ')'
-u = '{'
-i = '}'
-n = '['
-m = ']'
+l = '{'
+';' = '}'
+u = '['
+i = ']'
 o = '<'
-l = '>'
-y = '`'
-'[' = '\'
-v = '%'
-d = '_'
-t = '|'
-f = '+'
+p = '>'
+
 
 [layer.shift--shift]
-t = "_"
+4 = '^'
+8 = '%'
 9 = "!"
-0 = '*'
-y = '"'
-'[' = '#'
-']' = '^'
-'\' = 'capslock'
+0 = '+'
+y = "'"
+'[' = '_'
+']' = '#'
+'\' = '\'
 "'" = ','
