@@ -2,7 +2,7 @@
 
 # BAROS
 
-A NixOS config with nothing special in particular.
+A NixOS config with nothing special.
 
 ### Related Repos
 - [BAROS.config](https://github.com/sixslime/BAROS.config)
