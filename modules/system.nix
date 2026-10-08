@@ -47,4 +47,14 @@
     services.xserver.xkb.layout = "us";
 
     nixpkgs.config.allowUnfree = true;
+    boot.loader = {
+      grub = {
+        configurationLimit = 30;
+      };
+    };
+    nix.gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 7d";
+   };
 }
