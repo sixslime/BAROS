@@ -1,0 +1,27 @@
+# these must be bound to keys in 'keyboard.toml':
+[keys]
+up = 'a'
+left = 's'
+right = 'd'
+down = 'f'
+into = 'g'
+inspect = 'h'
+select = 'j'
+new = 'k'
+insert = 'l'
+delete = ';'
+save = ','
+copy = 'i'
+reset = 'o'
+close = 'p'
+back = 'q'
+find = 'e'
+
+# these must be bound to modifier layers in 'keyboard.toml' (explicitly):
+# - modifier layers are 'shift' | 'control' | 'alt' | 'meta' | 'altgr'
+[modifiers]
+action = 'rightalt'
+window = 'leftalt'
+invert = 'shift'
+special = 'meta'
+aux = 'control'

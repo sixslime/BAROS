@@ -1,0 +1,102 @@
+
+[main]
+'`' = { keyd = "noop" }
+1 = { keyd = "noop" }
+2 = ":"
+3 = "="
+4 = '@'
+5 = { keyd = "noop" }
+6 = { keyd = "noop" } 
+7 = { keyd = "noop" }
+8 = '$'
+9 = '?'
+0 = "&"
+"-" = { keyd = "noop" } 
+"=" = { keyd = "noop" }
+q = 'z'
+w = 'y'
+e = 'f' 
+r = 'p'
+t = ";"
+y = "'"
+u = 'g'
+i = 'c'
+o = 'r'
+p = 'l'
+'[' = '/'
+']' = '~'
+'\' = 'capslock' 
+capslock = 'esc'
+a = 'a'
+s = 'o'
+d = 'e'
+f = 'u'
+g = 'i'
+h = 'd'
+j = 'h'
+k = 't'
+l = 'n'
+';' = 's'
+"'" = '.'
+z = { layer = 'programming' }
+x = 'q' 
+c = 'j'
+v = 'k'
+b = 'x'
+n = 'b'
+m = 'm'
+',' = 'w'
+'.' = 'v'
+'/' = { layer = 'numbers' }
+
+# modifiers:
+leftalt = { layer = 'meta' }
+meta = { layer = 'altgr' }
+rightalt = { layer = 'alt' }
+control = { layer = 'control' }
+shift = { layer = 'shift' }
+
+[layer.numbers]
+a = '0'
+x = '1'
+c = '2'
+v = '3'
+s = '4'
+d = '5'
+f = '6'
+w = '7'
+e = '8'
+r = '9'
+# redundancies:
+l = '.'
+k = '-'
+j = '+'
+';' = '_'
+i = '%'
+o = '$'
+
+[layer.programming]
+j = '('
+u = ')'
+k = '{'
+i = '}'
+';' = '<'
+p = '>'
+l = '['
+o = ']'
+y = '`'
+'[' = '\'
+v = '%'
+d = '_'
+e = '-'
+r = '|'
+f = '+'
+
+[layer.shift--shift]
+t = "_"
+9 = "!"
+0 = '*'
+y = '"'
+'[' = '#'
+']' = '^'
+"'" = ','
