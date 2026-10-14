@@ -56,6 +56,8 @@ rightalt = { layer = 'alt' }
 control = { layer = 'control' }
 shift = { layer = 'shift' }
 
+[modifier_aliases]
+# depricated
 [layer.numbers]
 a = '0'
 x = '1'
