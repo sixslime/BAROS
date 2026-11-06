@@ -48,16 +48,12 @@ m = 'm'
 ',' = 'w'
 '.' = 'v'
 '/' = { layer = 'numbers' }
-
 # modifiers:
 leftalt = { layer = 'meta' }
 meta = { layer = 'altgr' }
 rightalt = { layer = 'alt' }
 control = { layer = 'control' }
 shift = { layer = 'shift' }
-
-[modifier_aliases]
-# ~ depricated, but required for axiom-keyd-gen to succeed.
 
 [layer.numbers]
 w = '1'
@@ -103,3 +99,6 @@ y = '"'
 '[' = '#'
 ']' = '^'
 "'" = ','
+
+# ~ depricated, but required for axiom-keyd-gen to succeed.
+[modifier_aliases]

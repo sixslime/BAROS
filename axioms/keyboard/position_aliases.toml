@@ -1,4 +1,4 @@
-# these must be bound to keys in 'keyboard.toml':
+# these must be bound to keys in 'layout.toml':
 [keys]
 up = 'a'
 left = 's'
