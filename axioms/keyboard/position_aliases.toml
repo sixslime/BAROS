@@ -18,7 +18,7 @@ back = 'q'
 find = 'e'
 next = 'r'
 
-# these must be *explicitly* bound to modifier unique layers in 'keyboard.toml':
+# these must be *explicitly* bound to modifier unique layers in 'layout.toml':
 # - modifier layers are 'shift' | 'control' | 'alt' | 'meta' | 'altgr'
 [modifiers]
 action = 'rightalt'
