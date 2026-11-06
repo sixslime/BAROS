@@ -57,18 +57,19 @@ control = { layer = 'control' }
 shift = { layer = 'shift' }
 
 [modifier_aliases]
-# depricated
+# ~ depricated, but required for axiom-keyd-gen to succeed.
+
 [layer.numbers]
+w = '1'
+e = '2'
+r = '3'
 a = '0'
-x = '1'
-c = '2'
-v = '3'
 s = '4'
 d = '5'
 f = '6'
-w = '7'
-e = '8'
-r = '9'
+x = '7'
+c = '8'
+v = '9'
 # redundancies:
 l = '.'
 k = '-'
