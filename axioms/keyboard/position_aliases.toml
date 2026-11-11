@@ -16,7 +16,8 @@ reset = 'o'
 close = 'p'
 back = 'q'
 find = 'e'
-next = 'r'
+next = 'w'
+command = 'space'
 
 # these must be *explicitly* bound to modifier unique layers in 'layout.toml':
 # - modifier layers are 'shift' | 'control' | 'alt' | 'meta' | 'altgr'
