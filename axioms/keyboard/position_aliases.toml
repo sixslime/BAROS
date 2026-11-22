@@ -20,7 +20,7 @@ next = 'w'
 command = 'space'
 
 # these must be *explicitly* bound to modifier unique layers in 'layout.toml':
-# - modifier layers are 'shift' | 'control' | 'alt' | 'meta' | 'altgr'
+# - modifier names are 'shift' | 'control' | 'alt' | 'meta' | 'altgr'
 [modifiers]
 action = 'rightalt'
 window = 'leftalt'
