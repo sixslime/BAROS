@@ -24,8 +24,8 @@ i = 'c'
 o = 'r'
 p = 'l'
 '[' = '/'
-']' = '~'
-'\' = '@' 
+']' = '+'
+'\' = '\' 
 capslock = 'esc'
 a = 'a'
 s = 'o'
@@ -66,13 +66,17 @@ f = '6'
 x = '7'
 c = '8'
 v = '9'
-# redundancies:
-l = '.'
-k = '-'
-j = '+'
-';' = '_'
-i = '%'
-o = '$'
+# secondary:
+2 = '+'
+3 = '-'
+4 = '/'
+5 = '*'
+t = '%'
+y = '$'
+g = '.'
+b = ','
+j = '('
+k = ')'
 
 [layer.programming]
 j = '('
@@ -84,20 +88,19 @@ o = ']'
 ';' = '<'
 p = '>'
 y = '`'
-'[' = '\'
-v = '%'
+'[' = '~'
 d = '_'
 e = '-'
 r = '|'
-f = '+'
-
 [layer.shift--shift]
-q = ";"
-9 = "*"
+8 = '@'
+9 = '*'
 0 = '!'
+q = ";" 
 y = '"'
 '[' = '#'
-']' = '^'
+']' = '%'
+# secondary:
 "'" = '_'
 
 # ~ depricated, but required for axiom-keyd-gen to succeed.
