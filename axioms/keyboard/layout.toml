@@ -1,23 +1,23 @@
 
 [main]
-'`' = { keyd = "noop" }
+'`' = 'capslock'
 1 = { keyd = "noop" }
 2 = ":"
-3 = "="
-4 = '@'
+3 = ","
+4 = '='
 5 = { keyd = "noop" }
 6 = { keyd = "noop" } 
 7 = { keyd = "noop" }
 8 = '$'
-9 = '?'
-0 = "&"
+9 = '&'
+0 = "?"
 "-" = { keyd = "noop" } 
 "=" = { keyd = "noop" }
-q = 'z'
+q = ';'
 w = 'y'
 e = 'f' 
 r = 'p'
-t = ";"
+t = "z"
 y = "'"
 u = 'g'
 i = 'c'
@@ -25,13 +25,13 @@ o = 'r'
 p = 'l'
 '[' = '/'
 ']' = '~'
-'\' = 'capslock' 
+'\' = '@' 
 capslock = 'esc'
 a = 'a'
 s = 'o'
 d = 'e'
 f = 'u'
-g = 'i'
+g = 'i' 
 h = 'd'
 j = 'h'
 k = 't'
@@ -79,10 +79,10 @@ j = '('
 u = ')'
 k = '{'
 i = '}'
-';' = '<'
-p = '>'
 l = '['
 o = ']'
+';' = '<'
+p = '>'
 y = '`'
 '[' = '\'
 v = '%'
@@ -92,13 +92,13 @@ r = '|'
 f = '+'
 
 [layer.shift--shift]
-t = "_"
-9 = "!"
-0 = '*'
+q = ";"
+9 = "*"
+0 = '!'
 y = '"'
 '[' = '#'
 ']' = '^'
-"'" = ','
+"'" = '_'
 
 # ~ depricated, but required for axiom-keyd-gen to succeed.
 [modifier_aliases]
